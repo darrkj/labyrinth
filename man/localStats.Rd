@@ -3,12 +3,12 @@
 \alias{localStats}
 \title{Vertex level measures}
 \usage{
-localStats(g, stats)
+localStats(g, loc)
 }
 \arguments{
 \item{g}{An igraph object}
 
-\item{stats}{A list of which netowrk parameters should be calculated}
+\item{loc}{A list of which netowrk parameters should be calculated}
 }
 \description{
 Function to compute a set of measures for each vertex in a given network.

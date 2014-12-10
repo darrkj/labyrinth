@@ -37,6 +37,6 @@ globalStats <- function(g, glob, dir = FALSE) {
        Adhesion = if('Adhesion'  %in% glob) graph.adhesion(g),
         Density = if('Density'   %in% glob) graph.density(g),
         Chordal = if('Chordal'   %in% glob) is.chordal(g)$chordal,
-      Connected = if('Connected' %in% glob) is.connected(g),
-    row.names = 1:length(V(g)))
+      Connected = if('Connected' %in% glob) is.connected(g)),
+    row.names = 1)
 }
