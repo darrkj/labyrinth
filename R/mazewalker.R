@@ -3,9 +3,9 @@
 #'
 #' Utilize igraph to compute network statistics to write back to Neo4j
 #'
-#' @usage #' mazeWalker(constraints, stats)
+#' @usage mazeWalker(constraints, stats)
 #' @param constraints A method pull a certain sub-graph
-#' @param stats A list of whcih netowrk parameters should be calculated
+#' @param stats A list of which netowrk parameters should be calculated
 #' @export
 #'
 #' @details Will write network parameters back tp Neo4j
@@ -46,7 +46,7 @@ mazeWalker <- function(constraints = NULL, stats = c("degree", "closeness")) {
   }
   return(invisible(NULL))
 }
-#
+
 
 
 
