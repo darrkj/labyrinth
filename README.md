@@ -1,9 +1,8 @@
-# mazewalker
-
-![alt text](labyrinth.png)
+# Labyrinth
 
 Package to compute netowrk parameters
 
+![alt text](labyrinth.png)
 
 
 
