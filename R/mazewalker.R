@@ -1,6 +1,24 @@
 
+#' Mazewalker
+#'
+#' Utilize igraph to compute network statistics to write back to Neo4j
+#'
+#' @usage #' mazeWalker(constraints, stats)
+#' @param constraints A method pull a certain sub-graph
+#' @param stats A list of whcih netowrk parameters should be calculated
+#' @export
+#'
+#' @details Will write network parameters back tp Neo4j
+#'
+#' @examples
+#' require(igraph)
+#' require(igraphdata)
+#'   
+#' data(karate)
+#' ingest(karate, 'knows')
+#' 
+#' mazeWalker('karate', c("degree", "closeness", "betweeness", 'hub'))
 
-# This is all that is needed for adding measures.
 
 mazeWalker <- function(constraints = NULL, stats = c("degree", "closeness")) {
   
@@ -31,6 +49,5 @@ mazeWalker <- function(constraints = NULL, stats = c("degree", "closeness")) {
 #
 
 
-mazeWalker("WHERE n.domain = 'potter'", c("degree", "closeness", "betweeness", 'hub'))
 
 
