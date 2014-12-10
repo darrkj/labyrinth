@@ -1,7 +1,7 @@
 
-clearDom <- function(dom) {
-  cypher(graph, paste0("match (a)-[r]->(b) where r.domain = '", dom, "' delete r;"))
-  cypher(graph, paste0("match a where a.domain = '", dom, "' delete a;"))
+clearDomain <- function(domain) {
+  cypher(graph, paste0("match (a)-[r]->(b) where r.domain = '", domain, "' delete r;"))
+  cypher(graph, paste0("match a where a.domain = '", domain, "' delete a;"))
 }
 
 
