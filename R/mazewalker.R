@@ -20,7 +20,7 @@
 #' mazeWalker('karate', c("degree", "closeness", "betweeness", 'hub'))
 
 
-mazeWalker <- function(constraints = NULL, stats = c("degree", "closeness")) {
+mazeWalker <- function(constraints = NULL, loc = "degree", glob = 'Degree') {
   
   if (!is.null(constraints)) {
     constraints <- paste0("WHERE n.domain = '", constraints, "'")
@@ -32,8 +32,10 @@ mazeWalker <- function(constraints = NULL, stats = c("degree", "closeness")) {
   # Create graph statistics
   paste0("MATCH (n)-[r]->(m) ", constraints, " RETURN ID(n), ID(m);") %>%
     cypher(graph, .) %>%
-    graph.data.frame %>% 
-    localStats(stats) -> statistics
+    graph.data.frame -> g
+  
+  statistics <- merge(localStats(g, loc), globalStats(g, glob))
+  
   #merge(data.frame(name = ids, ind = 1:length(ids))) -> stats
   
   ind <- which(ids %in% statistics$name)
