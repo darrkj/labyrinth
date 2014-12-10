@@ -43,7 +43,7 @@ mazeWalker <- function(constraints = NULL, loc = "degree", glob = 'Degree') {
   # Adding values back into the database.
   j <- 1
   for (i in ind) {
-    do_call(updateProp, quote(nodes[[i]]), as.list(statistics[j, stats]))
+    do_call(updateProp, quote(nodes[[i]]), as.list(statistics[j, c(loc, glob)]))
     j <- j + 1
   }
   return(invisible(NULL))
