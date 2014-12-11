@@ -42,6 +42,7 @@ May also need to run this line if the above fails.
 ```
 devtools::source_url("https://raw.githubusercontent.com/darrkj/RNeo4j/master/R/ingest.R")
 ```
+Check out what the data looks like.
 
 ```
 data <- cypher(graph, 'match n where n.domain = "karate" return n')
