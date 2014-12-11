@@ -10,4 +10,5 @@ License: What license is it under?
 Depends:
     RNeo4j,
     igraph,
-    dplyr
+    dplyr,
+    pryr
