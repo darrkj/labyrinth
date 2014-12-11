@@ -2,11 +2,11 @@
 
 Package to compute netowrk parameters
 
-![alt text](labyrinth.png)
+![alt text](labyrinth.png =100x100)
 
 
 
-Trying to recreate some fo the functionality of "neo4j mazerunner":https://github.com/kbastani/neo4j-mazerunner project, the handy work of "@kennybastani":https://twitter.com/kennybastani". I think that the capabilities are very cool. They utilize Neo4j, Docker and GraphX for each of thier strengths. For smaller networks though this can be a bit much. I have created something similar using igraph.
+Trying to recreate some fo the functionality of [neo4j mazerunner](https://github.com/kbastani/neo4j-mazerunner) project, the handy work of [@kennybastani](https://twitter.com/kennybastani). I think that the capabilities are very cool. They utilize Neo4j, Docker and GraphX for each of thier strengths. For smaller networks though this can be a bit much. I have created something similar using igraph.
 
 You first need the newest version of RNeo4j.
 
