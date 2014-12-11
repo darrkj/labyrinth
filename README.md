@@ -37,7 +37,11 @@ data(karate)
 
 ingest(karate, 'knows')
 ```
+May also need to run this line if the above fails.
 
+```
+devtools::source_url("https://raw.githubusercontent.com/darrkj/RNeo4j/master/R/ingest.R")
+```
 
 ```
 data <- cypher(graph, 'match n where n.domain = "karate" return n')
