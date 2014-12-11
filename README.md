@@ -49,8 +49,7 @@ ingest(karate, 'knows')
 Check out what the data looks like.
 
 ```
-data <- cypher(graph, 'match n where n.domain = "karate" return n')
-data[[1]][[1]]$data
+getNodes(graph, 'match n where n.domain = "karate" return n')[1]
 
 ```
 
@@ -83,8 +82,7 @@ mazeWalker('karate',
 Now we can re-query the database to see the new parameters that have been added.
 
 ```
-data <- cypher(graph, 'match n where n.domain = "karate" return n')
-data[[1]][[1]]$data
+getNodes(graph, 'match n where n.domain = "karate" return n')[1]
 ```
 Lots of interesting things have appeared.
 ```
