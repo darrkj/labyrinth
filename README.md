@@ -2,7 +2,7 @@
 
 Package to compute netowrk parameters
 
-![alt text](labyrinth.png =100x100)
+![alt text](labyrinth.png =100x)
 
 
 
