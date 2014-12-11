@@ -2,11 +2,13 @@
 
 
 
-<a href="url"><img src="labyrinth.jpg" align="left" height="148" width="148" ></a>
+
+<a href="url"><img src="labyrinth.jpg" align="right" height="188" width="188" ></a>
 
 Package to compute netowrk parameters
 
-<br><br>
+
+<br><br><br>
 
 
 Trying to recreate some fo the functionality of [neo4j mazerunner](https://github.com/kbastani/neo4j-mazerunner) project, the handy work of [@kennybastani](https://twitter.com/kennybastani). I think that the capabilities are very cool. They utilize Neo4j, Docker and GraphX for each of thier strengths. For smaller networks though this can be a bit much. I have created something similar using igraph.
