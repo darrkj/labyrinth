@@ -28,6 +28,12 @@ Create connection to graph database
 graph <- startGraph("http://localhost:7474/db/data/")
 ```
 
+Run this for the example to work.
+```
+if(!exists('ingest')) {
+  devtools::source_url("https://raw.githubusercontent.com/darrkj/RNeo4j/master/R/ingest.R")
+}
+```
 
 This will add the commonly known Karate data to Neo4j
 
@@ -37,11 +43,9 @@ data(karate)
 
 ingest(karate, 'knows')
 ```
-May also need to run this line if the above fails.
 
-```
-devtools::source_url("https://raw.githubusercontent.com/darrkj/RNeo4j/master/R/ingest.R")
-```
+
+
 Check out what the data looks like.
 
 ```
@@ -63,9 +67,11 @@ Nothing more than the data that was included from the Karate data set.
 ```
 
 
-In the labyrinth project there is a function called mazewalker which can add network statistics to all of our nodes.
+In the labyrinth project there is a function called mazewalker which can add network statistics to nodes
+in Neo4j.
 
-We can choose any number of local or global network measures.
+We can choose any number of local or global network measures. The first argument is a way to 
+specify a particular sub-graph. Of you ignore it you just get the whole database.
 
 ```
 mazeWalker('karate', 
@@ -122,3 +128,31 @@ Lots of interesting things have appeared.
 ## [1] "32"
 ```
 
+
+
+Global Measures
+* Degree 
+* Deg_Cent 
+* Clos_Cent 
+* Bet_Cent 
+* Eig_Cent
+* Assortativity 
+* Avg_Path_Len 
+* Clique  - Maximal Clique Size
+* Diameter
+* Radius 
+* Girth 
+* Adhesion 
+* Density 
+* Chordal 
+* Connected - Boolean, is the graph connected
+
+
+Local Measures
+* degree
+* closeness 
+* betweeness
+* eigenvector 
+* hub 
+* auth 
+* page 
