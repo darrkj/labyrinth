@@ -11,4 +11,5 @@ Depends:
     RNeo4j,
     igraph,
     dplyr,
-    pryr
+    pryr,
+    d3Network
