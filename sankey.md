@@ -5,7 +5,7 @@
 library(RNeo4j)
 library(labyrinth)
 
-importSample(graph, "dww")
+importSample(graph, "dfw")
 
 neoSankey()
 ```
