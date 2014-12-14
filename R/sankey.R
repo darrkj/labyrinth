@@ -1,5 +1,4 @@
 
-
 #' neoSankey
 #'
 #' Sankey plot of relationships in database
@@ -7,10 +6,8 @@
 #' @usage neoSankey()
 #' @export
 #'
-#'
 #' @examples
 #' neoSankey()
-
 
 neoSankey <- function(constraints = NULL) {
   
